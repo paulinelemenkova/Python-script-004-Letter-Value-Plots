@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf-8
 import os
 import pandas as pd
 import seaborn as sb
@@ -11,13 +13,13 @@ dfM = pd.read_csv("Tab-Bathy.csv")
 dfM.head(5)
 
 # plotting
-sb.catplot(
-           data=dfM, kind="boxen", palette='Paired',
+sb.catplot(data=dfM, kind="boxen", palette='Paired',
            orient="v", legend=True, legend_out=True, margin_titles=True
            )
 plt.xticks(rotation=45)
 plt.title('Letter-value plots for the Mariana Trench bathymetry',
-          fontsize=12, fontfamily='serif')
+          fontsize=12, fontfamily='serif'
+          )
 
 # visualization and printing
 plt.tight_layout()
